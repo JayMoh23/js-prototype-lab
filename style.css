@@ -1,0 +1,15 @@
+.die{
+    background-color:rgb(218, 211, 218);
+    border:solid rgb(13, 35, 44) 3px;
+    float:left;
+    height: 3em;
+    width:3em; 
+    padding:2em;
+    margin:1em;
+    
+}
+
+btn{
+    float:left;
+}
+    
