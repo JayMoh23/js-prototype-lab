@@ -9,7 +9,13 @@
     
 }
 
-btn{
-    float:left;
+button {
+    display:block;
 }
+
+body{
+    background-color:green;
+}
+
+
     

@@ -1,45 +1,60 @@
 /*console.log('hello');
 var die = function()*/
-var totalDie = [];
-
 
 document.addEventListener('DOMContentLoaded', function(){
 
+    var totalDie = [];
+    function Die (){
+        this.dieDiv=document.createElement('div');
+        this.dieDiv.className='die';
+    
+    }
+
     /*Buttons*/
 
-    var btn=document.createElement("button");
-    btn.innerText="Generate Die";
-    btn.className=" button1";
+    var newDieBtn=document.createElement("button");
+    newDieBtn.innerText="Generate Die";
+    newDieBtn.className=" button1";
 
-    var btn2=document.createElement("button");
-    btn2.innerHTML="Roll Dice";
-    btn2.className="button2";
+    var newDieBtn2=document.createElement("button");
+    newDieBtn2.innerHTML="Roll Dice";
+    newDieBtn2.className="button2";
 
-    var btn3=document.createElement("button");
-    btn3.innerHTML="Sum";
-    btn3.className="button3";
+    var newDieBtn3=document.createElement("button");
+    newDieBtn3.innerHTML="Sum";
+    newDieBtn3.className="button3";
 
-   document.body.appendChild(btn);
-   document.body.appendChild(btn2);
-   document.body.appendChild(btn3);
+   document.body.appendChild(newDieBtn);
+   document.body.appendChild(newDieBtn2);
+   document.body.appendChild(newDieBtn3);
 /*Button Actions*/
+/*Button 1*/
 
-   btn.addEventListener('click',function(){
+   newDieBtn.addEventListener('click',function(){
        var dieDiv= document.createElement('div');
        dieDiv.className = 'die';
        document.body.appendChild(dieDiv);
        dieDiv.setAttribute("id", Math.floor((Math.random() * 6) + 1));
-       totalDie.push(dieDiv);
+       totalDie.push(this.dieDiv);
        dieDiv.innerText= dieDiv.id;
+       console.log(totalDie);
 
    })
+/*Button2*/
 
-   btn2.addEventListener("click", function(){
-    dieDiv.setAttribute("id", Math.floor((Math.random() * 6) + 1));
-    dieDiv.innerText= dieDiv.id;
+   newDieBtn2.addEventListener("click", function(){
+    this.dieDiv.setAttribute("id", Math.floor((Math.random() * 6) + 1));
+    this.dieDiv.innerText=this.dieDiv.id; 
    })
 
    
+/*Button3*/
+newDieBtn3.addEventListener("click", function(){
+var totalDie = [];
+totalDie.push (dieDiv.id);
+window.alert("Youre' sum of die is"+ totalDie);
+
+})
 
 
 })
