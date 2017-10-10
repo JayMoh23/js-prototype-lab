@@ -56,5 +56,9 @@ window.alert("Youre' sum of die is"+ totalDie);
 
 })
 
+dieDiv.addEventListener('dblclick', function (){
+    dieDiv.previousSibling.remove();
+})
+
 
 })
